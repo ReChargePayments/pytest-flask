@@ -29,6 +29,12 @@ class JSONResponse(object):
         """
         return json.loads(self.data)
 
+    def json(self):
+        """Alias for the json cached property to provide a similar interface 
+        as the request library.
+        """
+        return self.json
+
 
 def _make_test_response_class(response_class):
     """Extends the response class with special attribute to test JSON
